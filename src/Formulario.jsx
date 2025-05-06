@@ -11,7 +11,7 @@ const Formulario = ({setCitas, citas}) => {
     const sintomas = document.getElementById('sint').value;
     
     //verificamos que esten todos los campos completos
-    if(nombre === "" && dueno === "" && fecha === "" && hora === "" && sintomas === ""){
+    if(nombre === "" || dueno === "" || fecha === "" || hora === "" || sintomas === ""){
       alert("Todos los campos deben ser completados")
     }
     else{
