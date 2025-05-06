@@ -1,15 +1,18 @@
 import React from 'react'
 
-const Cita = () => {
+const Cita = ({borrar,item}) => {
+  console.log({item})
+
   return (
     <>
-
     <div className="cita">
-        <p>Mascota: <span>Sifon</span></p>
-        <p>Dueño: <span>Flecha</span></p>
-        <p>Fecha: <span>2023-08-05</span></p>
-        <p>Hora: <span>09:24</span></p>
-        <p>Sintomas: <span>Duerme mucho</span></p><button className="button elimnar u-full-width">Eliminar ×</button>
+      {/*agrego a cada campo su valor*/}
+        <p>Mascota: <span>{item.nombre}</span></p>
+        <p>Dueño: <span>{item.dueno}</span></p>
+        <p>Fecha: <span>{item.fecha}</span></p>
+        <p>Hora: <span>{item.hora}</span></p>
+        <p>Sintomas: <span>{item.sintomas}</span></p>
+        <button className="button elimnar u-full-width" onClick={()=>borrar(item.id)}>Eliminar×</button>
     </div>
     </>
   )
